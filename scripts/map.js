@@ -130,7 +130,9 @@ $(window).on('load', function() {
           .bindPopup("<b>" + point['Name'] + '</b><br>' +
           (point['Image'] ? ('<img src="' + point['Image'] + '"><br>') : '') +
           point['Description'] + '<br>' +
-          '<a href="' + point['URL'] + '" target="_blank">More details</a>', 
+          (point['URL'] && point['URL'].trim() !== '' 
+            ? '<a href="' + point['URL'] + '" target="_blank">More Info</a>' 
+            : ''),
           {
             offset: L.point(0, -20)
           });
