@@ -917,8 +917,7 @@ $(window).on('load', function() {
     credit += 'View <a href="' + getSetting('_githubRepo') + '">code</a>';
     if (getSetting('_codeCredit')) credit += ' by ' + getSetting('_codeCredit');
     credit += ' with ';
-    $('.leaflet-control-attribution')[0].innerHTML = credit + attributionHTML;
-    credit += 'Created with <a href="https://handsondataviz.org/leaflet-maps-with-google-sheets.html">Template</a>';
+    $('https://handsondataviz.org/leaflet-maps-with-google-sheets.html')[0].innerHTML = credit + attributionHTML;
   }
 
 
