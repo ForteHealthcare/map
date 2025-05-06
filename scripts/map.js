@@ -129,7 +129,11 @@ $(window).on('load', function() {
         var marker = L.marker([point.Latitude, point.Longitude], {icon: icon})
           .bindTooltip("<b>" + point['Name'] + '</b><br>' +
           (point['Image'] ? ('<img src="' + point['Image'] + '"><br>') : '') +
-          point['Description']);
+          point['Description'],{
+        permanent: true,
+      interactive: true,
+      opacity: 0.9
+    });
 
         if (layers !== undefined && layers.length !== 1) {
           marker.addTo(layers[point.Group]);
