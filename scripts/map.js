@@ -127,7 +127,7 @@ $(window).on('load', function() {
 
       if (point.Latitude !== '' && point.Longitude !== '') {
         var marker = L.marker([point.Latitude, point.Longitude], {icon: icon})
-          .bindPopup("<b>" + point['Name'] + '</b><br>' +
+          .bindTooltip("<b>" + point['Name'] + '</b><br>' +
           (point['Image'] ? ('<img src="' + point['Image'] + '"><br>') : '') +
           point['Description']);
 
@@ -1133,7 +1133,7 @@ style: function (feature) {
 }).addTo(map);
 
 var cityPopTemplate = '<span style="font-size:14px">Owner: {OWNER1}</span> <br> <br>{SITE_ADDR} <br>{CITY} <br>{ZIP} <br> Massachusetts <br>Land Value: {LAND_VAL} <br>Other Value: {OTHER_VAL} <br> Total Value: {TOTAL_VAL} <br>Lot Size: {LOT_SIZE} {LOT_UNITS} <br> List Date: {LS_DATE} <br> List Price: ${LS_PRICE}';
-cities.bindPopup(function (layer) {
+cities.bindTooltip(function (layer) {
   return L.Util.template(
     cityPopTemplate, layer.feature.properties);
 });
