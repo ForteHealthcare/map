@@ -129,7 +129,9 @@ $(window).on('load', function() {
         var marker = L.marker([point.Latitude, point.Longitude], {icon: icon})
           .bindPopup("<b>" + point['Name'] + '</b><br>' +
           (point['Image'] ? ('<img src="' + point['Image'] + '"><br>') : '') +
-          point['Description'],{
+          point['Description'] + '<br>' +
+          '<a href="https://google.com" target="_blank">More details</a>', 
+          {
             offset: L.point(0, -20)
           });
 
