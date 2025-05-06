@@ -915,7 +915,7 @@ $(window).on('load', function() {
       credit += ' | ';
     }
 
-    credit += 'Created with <a href="https://handsondataviz.org/leaflet-maps-with-google-sheets.html">Template</a>;
+    credit += 'Created with' <a href="https://handsondataviz.org/leaflet-maps-with-google-sheets.html">Template</a>;
   }
 
 
