@@ -130,7 +130,7 @@ $(window).on('load', function() {
           .bindPopup("<b>" + point['Name'] + '</b><br>' +
           (point['Image'] ? ('<img src="' + point['Image'] + '"><br>') : '') +
           point['Description'],{
-            offset: L.point(0, 20)
+            offset: L.point(0, -20)
           });
 
         if (layers !== undefined && layers.length !== 1) {
